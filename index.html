@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FAVICON -->
+    <link rel="icon" type="image/x-icon" href="/images/FB-icon.png">
+    <title>Facebook Clone</title>
+
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="./stylesheets/styles.css">
+    <link rel="stylesheet" href="./stylesheets/queries.css">
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+    <!-- FONT AWESOME ICONS -->
+    <link rel="stylesheet" href="./font awesome/font-awesome-4.7.0/css/font-awesome.min.css">
+
+
+</head>
+<body>
+    <!-- -------------------------------- -->
+    <!-- -------HEADER---------- -->
+    <!-- -------------------------------- -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+
+                <!-- BRANDING -->
+                <div class="branding">
+                    <div class="logo">
+                        <i class="fa fa-facebook-official fb-icon" aria-hidden="true"></i>
+                    </div>
+                    <div class="search">
+                        <span><i class="fa fa-search" aria-hidden="true"></i></span>
+                        <input type="search" placeholder="Search Facebook">
+                    </div>
+                </div>
+
+                <!-- MENU 1 -->
+                <div class="menu1">
+                    <ul class="menu-list1">
+                        <li class="menu-link-home"><svg viewBox="0 0 28 28" class="a8c37x1j ms05siws l3qrxjdp b7h9ocf4 g28tu32o" fill="currentColor" height="28" width="28"><path d="M25.825 12.29C25.824 12.289 25.823 12.288 25.821 12.286L15.027 2.937C14.752 2.675 14.392 2.527 13.989 2.521 13.608 2.527 13.248 2.675 13.001 2.912L2.175 12.29C1.756 12.658 1.629 13.245 1.868 13.759 2.079 14.215 2.567 14.479 3.069 14.479L5 14.479 5 23.729C5 24.695 5.784 25.479 6.75 25.479L11 25.479C11.552 25.479 12 25.031 12 24.479L12 18.309C12 18.126 12.148 17.979 12.33 17.979L15.67 17.979C15.852 17.979 16 18.126 16 18.309L16 24.479C16 25.031 16.448 25.479 17 25.479L21.25 25.479C22.217 25.479 23 24.695 23 23.729L23 14.479 24.931 14.479C25.433 14.479 25.921 14.215 26.132 13.759 26.371 13.245 26.244 12.658 25.825 12.29"></path></svg></li>
+
+                        <li><svg viewBox="0 0 28 28" class="a8c37x1j ms05siws l3qrxjdp b7h9ocf4 py1f6qlh" fill="currentColor" height="28" width="28"><path d="M8.75 25.25C8.336 25.25 8 24.914 8 24.5 8 24.086 8.336 23.75 8.75 23.75L19.25 23.75C19.664 23.75 20 24.086 20 24.5 20 24.914 19.664 25.25 19.25 25.25L8.75 25.25ZM17.163 12.846 12.055 15.923C11.591 16.202 11 15.869 11 15.327L11 9.172C11 8.631 11.591 8.297 12.055 8.576L17.163 11.654C17.612 11.924 17.612 12.575 17.163 12.846ZM21.75 20.25C22.992 20.25 24 19.242 24 18L24 6.5C24 5.258 22.992 4.25 21.75 4.25L6.25 4.25C5.008 4.25 4 5.258 4 6.5L4 18C4 19.242 5.008 20.25 6.25 20.25L21.75 20.25ZM21.75 21.75 6.25 21.75C4.179 21.75 2.5 20.071 2.5 18L2.5 6.5C2.5 4.429 4.179 2.75 6.25 2.75L21.75 2.75C23.821 2.75 25.5 4.429 25.5 6.5L25.5 18C25.5 20.071 23.821 21.75 21.75 21.75Z"></path></svg></li>
+
+                        <li><svg viewBox="0 0 28 28" class="a8c37x1j ms05siws l3qrxjdp b7h9ocf4 py1f6qlh" fill="currentColor" height="28" width="28"><path d="M25.5 14C25.5 7.649 20.351 2.5 14 2.5 7.649 2.5 2.5 7.649 2.5 14 2.5 20.351 7.649 25.5 14 25.5 20.351 25.5 25.5 20.351 25.5 14ZM27 14C27 21.18 21.18 27 14 27 6.82 27 1 21.18 1 14 1 6.82 6.82 1 14 1 21.18 1 27 6.82 27 14ZM7.479 14 7.631 14C7.933 14 8.102 14.338 7.934 14.591 7.334 15.491 6.983 16.568 6.983 17.724L6.983 18.221C6.983 18.342 6.99 18.461 7.004 18.578 7.03 18.802 6.862 19 6.637 19L6.123 19C5.228 19 4.5 18.25 4.5 17.327 4.5 15.492 5.727 14 7.479 14ZM20.521 14C22.274 14 23.5 15.492 23.5 17.327 23.5 18.25 22.772 19 21.878 19L21.364 19C21.139 19 20.97 18.802 20.997 18.578 21.01 18.461 21.017 18.342 21.017 18.221L21.017 17.724C21.017 16.568 20.667 15.491 20.067 14.591 19.899 14.338 20.067 14 20.369 14L20.521 14ZM8.25 13C7.147 13 6.25 11.991 6.25 10.75 6.25 9.384 7.035 8.5 8.25 8.5 9.465 8.5 10.25 9.384 10.25 10.75 10.25 11.991 9.353 13 8.25 13ZM19.75 13C18.647 13 17.75 11.991 17.75 10.75 17.75 9.384 18.535 8.5 19.75 8.5 20.965 8.5 21.75 9.384 21.75 10.75 21.75 11.991 20.853 13 19.75 13ZM15.172 13.5C17.558 13.5 19.5 15.395 19.5 17.724L19.5 18.221C19.5 19.202 18.683 20 17.677 20L10.323 20C9.317 20 8.5 19.202 8.5 18.221L8.5 17.724C8.5 15.395 10.441 13.5 12.828 13.5L15.172 13.5ZM16.75 9C16.75 10.655 15.517 12 14 12 12.484 12 11.25 10.655 11.25 9 11.25 7.15 12.304 6 14 6 15.697 6 16.75 7.15 16.75 9Z"></path></svg></li>
+
+                        <li><svg viewBox="0 0 28 28" class="a8c37x1j ms05siws l3qrxjdp b7h9ocf4 py1f6qlh" fill="currentColor" height="28" width="28"><path d="M23.5 9.5H10.25a.75.75 0 00-.75.75v7c0 .414.336.75.75.75H17v5.5H4.5v-19h19v5zm0 14h-5v-6.25a.75.75 0 00-.75-.75H11V11h12.5v12.5zm1.5.25V4.25C25 3.561 24.439 3 23.75 3H4.25C3.561 3 3 3.561 3 4.25v19.5c0 .689.561 1.25 1.25 1.25h19.5c.689 0 1.25-.561 1.25-1.25z"></path></svg></li>
+                    </ul>
+                </div>
+
+                <!-- MENU 2 -->
+                <div class="menu2">
+                    <ul class="menu-list2">
+                        <li class="menu-links2 hoverLink"><i class="fa fa-th" aria-hidden="true"></i></li>
+
+                        <li class="menu-links2 hoverLink"><svg viewBox="0 0 28 28" alt class="a8c37x1j ms05siws l3qrxjdp b7h9ocf4 rs22bh7c" fill="currentColor" height="20" width="20"><path d="M14 2.042c6.76 0 12 4.952 12 11.64S20.76 25.322 14 25.322a13.091 13.091 0 0 1-3.474-.461.956 .956 0 0 0-.641.047L7.5 25.959a.961.961 0 0 1-1.348-.849l-.065-2.134a.957.957 0 0 0-.322-.684A11.389 11.389 0 0 1 2 13.682C2 6.994 7.24 2.042 14 2.042ZM6.794 17.086a.57.57 0 0 0 .827.758l3.786-2.874a.722.722 0 0 1 .868 0l2.8 2.1a1.8 1.8 0 0 0 2.6-.481l3.525-5.592a.57.57 0 0 0-.827-.758l-3.786 2.874a.722.722 0 0 1-.868 0l-2.8-2.1a1.8 1.8 0 0 0-2.6.481Z"></path></svg></li>
+
+                        <li class="menu-links2 hoverLink"><svg viewBox="0 0 28 28" alt class="a8c37x1j ms05siws l3qrxjdp b7h9ocf4 rs22bh7c" fill="currentColor" height="20" width="20"><path d="M7.847 23.488C9.207 23.488 11.443 23.363 14.467 22.806 13.944 24.228 12.581 25.247 10.98 25.247 9.649 25.247 8.483 24.542 7.825 23.488L7.847 23.488ZM24.923 15.73C25.17 17.002 24.278 18.127 22.27 19.076 21.17 19.595 18.724 20.583 14.684 21.369 11.568 21.974 9.285 22.113 7.848 22.113 7.421 22.113 7.068 22.101 6.79 22.085 4.574 21.958 3.324 21.248 3.077 19.976 2.702 18.049 3.295 17.305 4.278 16.073L4.537 15.748C5.2 14.907 5.459 14.081 5.035 11.902 4.086 7.022 6.284 3.687 11.064 2.753 15.846 1.83 19.134 4.096 20.083 8.977 20.506 11.156 21.056 11.824 21.986 12.355L21.986 12.356 22.348 12.561C23.72 13.335 24.548 13.802 24.923 15.73Z"></path></svg></i></li>
+
+                        <li class="menu-links2"><img class="profile" src="https://scontent-tir2-1.xx.fbcdn.net/v/t1.6435-1/170814730_2976249592701775_122923138642714073_n.jpg?stp=cp0_dst-jpg_p60x60&_nc_cat=111&ccb=1-7&_nc_sid=7206a8&_nc_ohc=b0KKoAMSlOkAX8EBUqV&_nc_oc=AQl68BxJxk8QgyfnDMDH0jBJaOynikng_k_imkJKWzzWAzpuipzNLSZLZDgrcYhjWbtt0T2i8CCknl3IRNVIJEgi&_nc_ht=scontent-tir2-1.xx&oh=00_AT_5hMoo02MnVocJXtVzO5hiFqeO5CYzsZQELl7dc9WfQw&oe=62E15187" alt=""></li>
+                    </ul>
+                </div>
+
+            </nav>
+        </div>
+    </header>
+
+
+    
+    <!-- -------------------------------- -->
+    <!-- -------SECTION---------- -->
+    <!-- -------------------------------- -->
+    <section class="section" >
+        <div class="container" >
+            <div class="row" >
+
+                <!-- LEFT SIDE BAR -->
+                <div class="col3 leftBar">
+                    <div class="left-menu-list">
+                        <ul class="left-menu-links left-menu-visible">
+                            <li>
+                                <div class="menu-link-items">
+                                    <div class="item1"><img class="profile" src="https://scontent-tir2-1.xx.fbcdn.net/v/t1.6435-1/170814730_2976249592701775_122923138642714073_n.jpg?stp=cp0_dst-jpg_p60x60&_nc_cat=111&ccb=1-7&_nc_sid=7206a8&_nc_ohc=b0KKoAMSlOkAX8EBUqV&_nc_oc=AQl68BxJxk8QgyfnDMDH0jBJaOynikng_k_imkJKWzzWAzpuipzNLSZLZDgrcYhjWbtt0T2i8CCknl3IRNVIJEgi&_nc_ht=scontent-tir2-1.xx&oh=00_AT_5hMoo02MnVocJXtVzO5hiFqeO5CYzsZQELl7dc9WfQw&oe=62E15187" alt=""></div>
+                                    <div class="item2">Tarun Sharma</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="menu-link-items">
+                                    <div class="item1"><img class="hu5pjgll bixrwtb6" src="https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/-XF4FQcre_i.png" style="height:36px;width:36px" alt=""></div>
+                                    <div class="item2">Friends</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="menu-link-items">
+                                    <div class="item1"><img class="hu5pjgll bixrwtb6" src="https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/mk4dH3FK0jT.png" style="height:36px;width:36px" alt=""></div>
+                                    <div class="item2">Groups</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="menu-link-items">
+                                    <div class="item1"><img class="hu5pjgll bixrwtb6" src="https://static.xx.fbcdn.net/rsrc.php/v3/ys/r/9BDqQflVfXI.png" style="height:36px;width:36px" alt=""></div>
+                                    <div class="item2">Marketplace</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="menu-link-items">
+                                    <div class="item1"><img class="hu5pjgll bixrwtb6" src="https://static.xx.fbcdn.net/rsrc.php/v3/yG/r/A1HlI2LVo58.png" style="height:36px;width:36px" alt=""></div>
+                                    <div class="item2">Watch</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="menu-link-items">
+                                    <div class="item1"><img class="hu5pjgll bixrwtb6" src="https://static.xx.fbcdn.net/rsrc.php/v3/y7/r/AYj2837MmgX.png" style="height:36px;width:36px" alt=""></div>
+                                    <div class="item2">Memories</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="menu-link-items seeMore-js">
+                                    <div class="item1 seeMore"><svg fill="currentColor" viewBox="0 0 16 16" width="1em" height="1em" class="a8c37x1j ms05siws l3qrxjdp b7h9ocf4 rs22bh7c jnigpg78 odw8uiq3"><g fill-rule="evenodd" transform="translate(-448 -544)"><path fill-rule="nonzero" d="M452.707 549.293a1 1 0 0 0-1.414 1.414l4 4a1 1 0 0 0 1.414 0l4-4a1 1 0 0 0-1.414-1.414L456 552.586l-3.293-3.293z"></path></g></svg></div>
+                                    <div class="item2 ">See More</div>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <ul class="left-menu-links left-menu-hidden hidden">
+                            <li>
+                                <div class="menu-link-items">
+                                    <div class="item1"><img class="hu5pjgll bixrwtb6" src="https://static.xx.fbcdn.net/rsrc.php/v3/yl/r/_JPdPzLmp9j.png" alt="" style="height: 36px; width: 36px;"></div>
+                                    <div class="item2">Ad Center</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="menu-link-items">
+                                    <div class="item1"><img class="hu5pjgll bixrwtb6" src="https://static.xx.fbcdn.net/rsrc.php/v3/yk/r/qR88GIDM38e.png" alt="" style="height: 36px; width: 36px;"></div>
+                                    <div class="item2">Ads Manager</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="menu-link-items">
+                                    <div class="item1"><img class="hu5pjgll bixrwtb6" src="https://static.xx.fbcdn.net/rsrc.php/v3/yJ/r/K4SvMBrrneO.png" alt="" style="height: 36px; width: 36px;"></div>
+                                    <div class="item2">Blood Donations</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="menu-link-items">
+                                    <div class="item1"><img class="hu5pjgll bixrwtb6" src="https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/x1JqqPh_PS1.png" alt="" style="height: 36px; width: 36px;"></div>
+                                    <div class="item2">Business Manager</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="menu-link-items">
+                                    <div class="item1"><img class="hu5pjgll bixrwtb6" src="https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/tKwWVioirmj.png" alt="" style="height: 36px; width: 36px;"></div>
+                                    <div class="item2">Climate Science Center</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="menu-link-items">
+                                    <div class="item1"><img class="hu5pjgll bixrwtb6" src="https://static.xx.fbcdn.net/rsrc.php/v3/yk/r/WreZVYrGEZH.png" alt="" style="height: 36px; width: 36px;"></div>
+                                    <div class="item2">Community Help</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="menu-link-items">
+                                    <div class="item1"><img class="hu5pjgll bixrwtb6" src="https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/YF1bztyGuX-.png" alt="" style="height: 36px; width: 36px;"></div>
+                                    <div class="item2">Messenger</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="menu-link-items">
+                                    <div class="item1"><img class="hu5pjgll bixrwtb6" src="https://static.xx.fbcdn.net/rsrc.php/v3/y2/r/HBcx-giUZ2Y.png" alt="" style="height: 36px; width: 36px;"></div>
+                                    <div class="item2">Messenger Kids</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="menu-link-items">
+                                    <div class="item1"><img class="hu5pjgll bixrwtb6" src="https://static.xx.fbcdn.net/rsrc.php/v3/ys/r/FGO-FBo3R2E.png" alt="" style="height: 36px; width: 36px;"></div>
+                                    <div class="item2">Most Recent</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="menu-link-items">
+                                    <div class="item1"><img class="hu5pjgll bixrwtb6" src="https://static.xx.fbcdn.net/rsrc.php/v3/yZ/r/i7hepQ2OeZg.png" alt="" style="height: 36px; width: 36px;"></div>
+                                    <div class="item2">Pages</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="menu-link-items">
+                                    <div class="item1"><img class="hu5pjgll bixrwtb6" src="https://static.xx.fbcdn.net/rsrc.php/v3/yn/r/XEWvxf1LQAG.png" alt="" style="height: 36px; width: 36px;"></div>
+                                    <div class="item2">Play Games</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="menu-link-items">
+                                    <div class="item1"><img class="hu5pjgll bixrwtb6" src="https://static.xx.fbcdn.net/rsrc.php/v3/yI/r/WcCzeboYevF.png" alt="" style="height: 36px; width: 36px;"></div>
+                                    <div class="item2">Recent ad activity</div>
+                                </div>
+                            </li>
+                                <div class="menu-link-items">
+                                    <div class="item1"><img class="hu5pjgll bixrwtb6" src="https://static.xx.fbcdn.net/rsrc.php/v3/yr/r/2uPlV4oORjU.png" alt="" style="height: 36px; width: 36px;"></div>
+                                    <div class="item2">Saved</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="menu-link-items seeLess-js">
+                                    <div class="item1 seeMore "><svg fill="currentColor" viewBox="0 0 20 20" width="1em" height="1em" class="a8c37x1j ms05siws l3qrxjdp b7h9ocf4 rs22bh7c jnigpg78 odw8uiq3"><path d="M15.47 12.2 10 6.727 4.53 12.2a.75.75 0 0 1-1.06-1.061l6-6a.751.751 0 0 1 1.06 0l6 6a.75.75 0 0 1-1.06 1.061z"></path></svg></div>
+                                    <div class="item2 ">See less</div>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <hr>
+
+                        <div class="shortcut-title" >Your Shortcuts</div>
+                        <ul class="left-menu-links ">
+                            <li>
+                                <div class="menu-link-items">
+                                    <div class="item1"><img src="https://scontent.fixc3-1.fna.fbcdn.net/v/t39.2081-6/42630609_2166936443330818_3464735768197464064_n.png?stp=c5.5.50.50a_dst-png_p56x56&_nc_cat=1&ccb=1-7&_nc_sid=eaa83b&_nc_ohc=opHYoqyGW-oAX87TCTT&_nc_ht=scontent.fixc3-1.fna&oh=00_AT8yy483tLutkzv8nqoojahpqDtdvzxXqElZ84XgytPigQ&oe=62C24CAF" alt=""></div>
+                                    <div class="item2">8 Ball Pool</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="menu-link-items">
+                                    <div class="item1"><img class="hu5pjgll bixrwtb6" src="https://scontent.fixc3-1.fna.fbcdn.net/v/t39.2081-6/27045397_10155399661101229_4188312396068028416_n.png?stp=c5.5.50.50a_dst-png_p56x56&_nc_cat=1&ccb=1-7&_nc_sid=eaa83b&_nc_ohc=Yfbad3JkE-kAX_NW2yH&_nc_ht=scontent.fixc3-1.fna&oh=00_AT93VvvgwktAvgrE5_QtwFh9sTFJoesHOmywZDWfJ7KLIg&oe=62C107CE" alt=""></div>
+                                    <div class="item2">Texas HoldEm Poker</div>
+                                </div>
+                            </li>
+                           
+                        </ul>
+
+                    </div>
+
+                </div>
+
+                <!-- MIDDLE BAR FOR POSTS -->
+                <div class="col3 middleBar">
+
+                    <!-- STORIES -->
+
+                    <div class="stories-container">
+
+                        <div class="stories">
+                            <div class="story">
+                                <div class="bg">
+                                    <img class="story-img-js" src="./images/tarun.JPG" alt="">
+                                </div>
+                                <div class="desc story-js">
+                                    <div class="profile"><img src="https://scontent-tir2-1.xx.fbcdn.net/v/t1.6435-1/170814730_2976249592701775_122923138642714073_n.jpg?stp=cp0_dst-jpg_p60x60&_nc_cat=111&ccb=1-7&_nc_sid=7206a8&_nc_ohc=b0KKoAMSlOkAX8EBUqV&_nc_oc=AQl68BxJxk8QgyfnDMDH0jBJaOynikng_k_imkJKWzzWAzpuipzNLSZLZDgrcYhjWbtt0T2i8CCknl3IRNVIJEgi&_nc_ht=scontent-tir2-1.xx&oh=00_AT_5hMoo02MnVocJXtVzO5hiFqeO5CYzsZQELl7dc9WfQw&oe=62E15187" alt=""></div>
+                                    <div class="name">Tarun Sharma</div>
+                                </div>
+                            </div>                            
+                        </div>
+                        <div class="stories">
+                            <div class="story">
+                                <div class="bg">
+                                    <img class="story-img-js" src="./images/professor1.jpg" alt="">
+                                </div>
+                                <div class="desc story-js">
+                                    <div class="profile"><img src="./images/professor2.jpg" alt=""></div>
+                                    <div class="name">Professor</div>
+                                </div>
+                            </div>                            
+                        </div>
+                        <div class="stories">
+                            <div class="story">
+                                <div class="bg">
+                                    <img class="story-img-js" src="./images/kristein1.jpg" alt="">
+                                </div>
+                                <div class="desc story-js">
+                                    <div class="profile"><img src="./images/kristein2.jpg" alt=""></div>
+                                    <div class="name">Kristein Stewart</div>
+                                </div>
+                            </div>                            
+                        </div>
+                        <div class="stories">
+                            <div class="story">
+                                <div class="bg">
+                                    <img class="story-img-js" src="./images/kartik1.jpg" alt="">
+                                </div>
+                                <div class="desc story-js">
+                                    <div class="profile"><img src="./images/kartik2.webp" alt=""></div>
+                                    <div class="name">Kartik Aryan</div>
+                                </div>
+                            </div>                            
+                        </div>
+                        <div class="stories">
+                            <div class="story">
+                                <div class="bg">
+                                    <img class="story-img-js" src="./images/eleven1.webp" alt="">
+                                </div>
+                                <div class="desc story-js">
+                                    <div class="profile"><img src="./images/eleven2.jpg" alt=""></div>
+                                    <div class="name">Eleven</div>
+                                </div>
+                            </div>                            
+                        </div>
+                       
+
+                    </div>
+
+                    <!-- POSTING -->
+
+                    <div class="posting-container">
+
+                        <div class="col2">
+                            <div class="profile"><img src="https://scontent-tir2-1.xx.fbcdn.net/v/t1.6435-1/170814730_2976249592701775_122923138642714073_n.jpg?stp=cp0_dst-jpg_p60x60&_nc_cat=111&ccb=1-7&_nc_sid=7206a8&_nc_ohc=b0KKoAMSlOkAX8EBUqV&_nc_oc=AQl68BxJxk8QgyfnDMDH0jBJaOynikng_k_imkJKWzzWAzpuipzNLSZLZDgrcYhjWbtt0T2i8CCknl3IRNVIJEgi&_nc_ht=scontent-tir2-1.xx&oh=00_AT_5hMoo02MnVocJXtVzO5hiFqeO5CYzsZQELl7dc9WfQw&oe=62E15187" alt=""></div>
+                            <div class="search post-form-trigger-js"><input type="search" placeholder="What's on your mind, Tarun?"></div>
+                        </div>
+                        <hr>
+                        <div class="col2">
+                            <div class="items">
+                                <svg fill="currentColor" viewBox="0 0 24 24" width="1.6em" height="1.6em" class="a8c37x1j ms05siws l3qrxjdp b7h9ocf4 fxtw5amg rgmg9uty b73ngqbp"><g fill-rule="evenodd" transform="translate(-444 -156)"><g><path d="M113.029 2.514c-.363-.088-.746.014-1.048.234l-2.57 1.88a.999.999 0 0 0-.411.807v8.13a1 1 0 0 0 .41.808l2.602 1.901c.219.16.477.242.737.242.253 0 .508-.077.732-.235.34-.239.519-.65.519-1.065V3.735a1.25 1.25 0 0 0-.971-1.22m-20.15 6.563c.1-.146 2.475-3.578 5.87-3.578 3.396 0 5.771 3.432 5.87 3.578a.749.749 0 0 1 0 .844c-.099.146-2.474 3.578-5.87 3.578-3.395 0-5.77-3.432-5.87-3.578a.749.749 0 0 1 0-.844zM103.75 19a3.754 3.754 0 0 0 3.75-3.75V3.75A3.754 3.754 0 0 0 103.75 0h-10A3.754 3.754 0 0 0 90 3.75v11.5A3.754 3.754 0 0 0 93.75 19h10z" transform="translate(354 158.5)"></path><path d="M98.75 12c1.379 0 2.5-1.121 2.5-2.5S100.129 7 98.75 7a2.503 2.503 0 0 0-2.5 2.5c0 1.379 1.121 2.5 2.5 2.5" transform="translate(354 158.5)"></path></g></g></svg> 
+                                <span>Live Video</span>
+                            </div>
+                            <div class="items">
+                                <svg fill="currentColor" viewBox="0 0 24 24" width="1.6em" height="1.6em" class="a8c37x1j ms05siws l3qrxjdp b7h9ocf4 j58f7537 rgmg9uty b73ngqbp"><g fill-rule="evenodd" transform="translate(-444 -156)"><g><path d="m96.968 22.425-.648.057a2.692 2.692 0 0 1-1.978-.625 2.69 2.69 0 0 1-.96-1.84L92.01 4.32a2.702 2.702 0 0 1 .79-2.156c.47-.472 1.111-.731 1.774-.79l2.58-.225a.498.498 0 0 1 .507.675 4.189 4.189 0 0 0-.251 1.11L96.017 18.85a4.206 4.206 0 0 0 .977 3.091s.459.364-.026.485m8.524-16.327a1.75 1.75 0 1 1-3.485.305 1.75 1.75 0 0 1 3.485-.305m5.85 3.011a.797.797 0 0 0-1.129-.093l-3.733 3.195a.545.545 0 0 0-.062.765l.837.993a.75.75 0 1 1-1.147.966l-2.502-2.981a.797.797 0 0 0-1.096-.12L99 14.5l-.5 4.25c-.06.674.326 2.19 1 2.25l11.916 1.166c.325.026 1-.039 1.25-.25.252-.21.89-.842.917-1.166l.833-8.084-3.073-3.557z" transform="translate(352 156.5)"></path><path fill-rule="nonzero" d="m111.61 22.963-11.604-1.015a2.77 2.77 0 0 1-2.512-2.995L98.88 3.09A2.77 2.77 0 0 1 101.876.58l11.603 1.015a2.77 2.77 0 0 1 2.513 2.994l-1.388 15.862a2.77 2.77 0 0 1-2.994 2.513zm.13-1.494.082.004a1.27 1.27 0 0 0 1.287-1.154l1.388-15.862a1.27 1.27 0 0 0-1.148-1.37l-11.604-1.014a1.27 1.27 0 0 0-1.37 1.15l-1.387 15.86a1.27 1.27 0 0 0 1.149 1.37l11.603 1.016z" transform="translate(352 156.5)"></path></g></g></svg>
+                                <span>Photo/video</span>
+                            </div>
+                            <div class="items">
+                                <svg fill="currentColor" viewBox="0 0 24 24" width="1.6em" height="1.6em" class="a8c37x1j ms05siws l3qrxjdp b7h9ocf4 mu8pnim0 rgmg9uty b73ngqbp"><g fill-rule="evenodd" transform="translate(-444 -156)"><g><path d="M107.285 13c.49 0 .841.476.712.957-.623 2.324-2.837 4.043-5.473 4.043-2.636 0-4.85-1.719-5.473-4.043-.13-.48.222-.957.712-.957h9.522z" transform="translate(353.5 156.5)"></path><path fill-rule="nonzero" d="M114.024 11.5c0 6.351-5.149 11.5-11.5 11.5s-11.5-5.149-11.5-11.5S96.173 0 102.524 0s11.5 5.149 11.5 11.5zm-2 0a9.5 9.5 0 1 0-19 0 9.5 9.5 0 0 0 19 0z" transform="translate(353.5 156.5)"></path><path d="M99.524 8.5c0 .829-.56 1.5-1.25 1.5s-1.25-.671-1.25-1.5.56-1.5 1.25-1.5 1.25.671 1.25 1.5m8.5 0c0 .829-.56 1.5-1.25 1.5s-1.25-.671-1.25-1.5.56-1.5 1.25-1.5 1.25.671 1.25 1.5m-.739 4.5h-9.522c-.49 0-.841.476-.712.957.623 2.324 2.837 4.043 5.473 4.043 2.636 0 4.85-1.719 5.473-4.043.13-.48-.222-.957-.712-.957m-2.165 2c-.667.624-1.592 1-2.596 1a3.799 3.799 0 0 1-2.596-1h5.192" transform="translate(353.5 156.5)"></path></g></g></svg>
+                                <span>Feeling/activity</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- POSTS -->
+
+                    <div class="post-container">
+                        <div class="posts">
+                            <div class="item1">
+                                <div class="bio">
+                                    <div class="profile"><img src="./images/professor2.jpg" alt=""></div>
+                                    <div class="desc">
+                                        <p class="name">Professor</p>
+                                        <p class="time">12h <svg fill="currentColor" viewBox="0 0 16 16" width="1em" height="1em" class="a8c37x1j ms05siws l3qrxjdp b7h9ocf4 py1f6qlh cyypbtt7 fwizqjfa" title="Shared with Public"><title>Shared with Public</title><g fill-rule="evenodd" transform="translate(-448 -544)"><g><path d="M109.5 408.5c0 3.23-2.04 5.983-4.903 7.036l.07-.036c1.167-1 1.814-2.967 2-3.834.214-1 .303-1.3-.5-1.96-.31-.253-.677-.196-1.04-.476-.246-.19-.356-.59-.606-.73-.594-.337-1.107.11-1.954.223a2.666 2.666 0 0 1-1.15-.123c-.007 0-.007 0-.013-.004l-.083-.03c-.164-.082-.077-.206.006-.36h-.006c.086-.17.086-.376-.05-.529-.19-.214-.54-.214-.804-.224-.106-.003-.21 0-.313.004l-.003-.004c-.04 0-.084.004-.124.004h-.037c-.323.007-.666-.034-.893-.314-.263-.353-.29-.733.097-1.09.28-.26.863-.8 1.807-.22.603.37 1.166.667 1.666.5.33-.11.48-.303.094-.87a1.128 1.128 0 0 1-.214-.73c.067-.776.687-.84 1.164-1.2.466-.356.68-.943.546-1.457-.106-.413-.51-.873-1.28-1.01a7.49 7.49 0 0 1 6.524 7.434" transform="translate(354 143.5)"></path><path d="M104.107 415.696A7.498 7.498 0 0 1 94.5 408.5a7.48 7.48 0 0 1 3.407-6.283 5.474 5.474 0 0 0-1.653 2.334c-.753 2.217-.217 4.075 2.29 4.075.833 0 1.4.561 1.333 2.375-.013.403.52 1.78 2.45 1.89.7.04 1.184 1.053 1.33 1.74.06.29.127.65.257.97a.174.174 0 0 0 .193.096" transform="translate(354 143.5)"></path><path fill-rule="nonzero" d="M110 408.5a8 8 0 1 1-16 0 8 8 0 0 1 16 0zm-1 0a7 7 0 1 0-14 0 7 7 0 0 0 14 0z" transform="translate(354 143.5)"></path></g></g></svg></p>
+                                    </div>
+                                </div>
+                                <div class="_3dots"><span></span></div>
+                            </div>
+
+                            <div class="item2">
+                                <div class="post"><img src="./images/professor3.jpg" alt=""></div>
+                            </div>
+
+                            <div class="item3">
+                                    <div class="like">
+                                        <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                        <span>Like</span>
+                                    </div>
+                                    <div class="comment">
+                                        <i class="fa fa-comment-o" aria-hidden="true"></i>
+                                        <span>Comment</span>
+                                    </div>
+                            </div>
+
+                            <hr>
+
+                            <div class="item4">
+                                <div class="profile"><img src="https://scontent-tir2-1.xx.fbcdn.net/v/t1.6435-1/170814730_2976249592701775_122923138642714073_n.jpg?stp=cp0_dst-jpg_p48x48&_nc_cat=111&ccb=1-7&_nc_sid=7206a8&_nc_ohc=vZ8yZDxrW28AX8X0Zzh&_nc_oc=AQmtZZiwO6Jybafw7FBe-TEBt02Td0KKVb0DeCEAm3KZBe9SlHNF_yusclmX43v2wb3x2T1eYI_zcP-OpyKiaU5g&_nc_ht=scontent-tir2-1.xx&oh=00_AT8YchkVpDvW-E3BtPBnmG0RH9Ecv0W6eD_8vDT_Ttrrfg&oe=62E54607" alt=""></div>
+                                <div class="search"><input type="search" placeholder="Write a comment"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="post-container">
+                        <div class="posts">
+                            <div class="item1">
+                                <div class="bio">
+                                    <div class="profile"><img src="https://scontent-tir2-1.xx.fbcdn.net/v/t1.6435-1/170814730_2976249592701775_122923138642714073_n.jpg?stp=cp0_dst-jpg_p48x48&_nc_cat=111&ccb=1-7&_nc_sid=7206a8&_nc_ohc=vZ8yZDxrW28AX8X0Zzh&_nc_oc=AQmtZZiwO6Jybafw7FBe-TEBt02Td0KKVb0DeCEAm3KZBe9SlHNF_yusclmX43v2wb3x2T1eYI_zcP-OpyKiaU5g&_nc_ht=scontent-tir2-1.xx&oh=00_AT8YchkVpDvW-E3BtPBnmG0RH9Ecv0W6eD_8vDT_Ttrrfg&oe=62E54607" alt=""></div>
+                                    <div class="desc">
+                                        <p class="name">Professor</p>
+                                        <p class="time">12h <svg fill="currentColor" viewBox="0 0 16 16" width="1em" height="1em" class="a8c37x1j ms05siws l3qrxjdp b7h9ocf4 py1f6qlh cyypbtt7 fwizqjfa" title="Shared with Public"><title>Shared with Public</title><g fill-rule="evenodd" transform="translate(-448 -544)"><g><path d="M109.5 408.5c0 3.23-2.04 5.983-4.903 7.036l.07-.036c1.167-1 1.814-2.967 2-3.834.214-1 .303-1.3-.5-1.96-.31-.253-.677-.196-1.04-.476-.246-.19-.356-.59-.606-.73-.594-.337-1.107.11-1.954.223a2.666 2.666 0 0 1-1.15-.123c-.007 0-.007 0-.013-.004l-.083-.03c-.164-.082-.077-.206.006-.36h-.006c.086-.17.086-.376-.05-.529-.19-.214-.54-.214-.804-.224-.106-.003-.21 0-.313.004l-.003-.004c-.04 0-.084.004-.124.004h-.037c-.323.007-.666-.034-.893-.314-.263-.353-.29-.733.097-1.09.28-.26.863-.8 1.807-.22.603.37 1.166.667 1.666.5.33-.11.48-.303.094-.87a1.128 1.128 0 0 1-.214-.73c.067-.776.687-.84 1.164-1.2.466-.356.68-.943.546-1.457-.106-.413-.51-.873-1.28-1.01a7.49 7.49 0 0 1 6.524 7.434" transform="translate(354 143.5)"></path><path d="M104.107 415.696A7.498 7.498 0 0 1 94.5 408.5a7.48 7.48 0 0 1 3.407-6.283 5.474 5.474 0 0 0-1.653 2.334c-.753 2.217-.217 4.075 2.29 4.075.833 0 1.4.561 1.333 2.375-.013.403.52 1.78 2.45 1.89.7.04 1.184 1.053 1.33 1.74.06.29.127.65.257.97a.174.174 0 0 0 .193.096" transform="translate(354 143.5)"></path><path fill-rule="nonzero" d="M110 408.5a8 8 0 1 1-16 0 8 8 0 0 1 16 0zm-1 0a7 7 0 1 0-14 0 7 7 0 0 0 14 0z" transform="translate(354 143.5)"></path></g></g></svg></p>
+                                    </div>
+                                </div>
+                                <div class="_3dots"><span></span></div>
+                            </div>
+
+                            <div class="item2">
+                                <div class="post"><img src="./images/tarun2.jpg" alt=""></div>
+                            </div>
+
+                            <div class="item3">
+                                    <div class="like">
+                                        <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                        <span>Like</span>
+                                    </div>
+                                    <div class="comment">
+                                        <i class="fa fa-comment-o" aria-hidden="true"></i>
+                                        <span>Comment</span>
+                                    </div>
+                            </div>
+
+                            <hr>
+
+                            <div class="item4">
+                                <div class="profile"><img src="https://scontent-tir2-1.xx.fbcdn.net/v/t1.6435-1/170814730_2976249592701775_122923138642714073_n.jpg?stp=cp0_dst-jpg_p48x48&_nc_cat=111&ccb=1-7&_nc_sid=7206a8&_nc_ohc=vZ8yZDxrW28AX8X0Zzh&_nc_oc=AQmtZZiwO6Jybafw7FBe-TEBt02Td0KKVb0DeCEAm3KZBe9SlHNF_yusclmX43v2wb3x2T1eYI_zcP-OpyKiaU5g&_nc_ht=scontent-tir2-1.xx&oh=00_AT8YchkVpDvW-E3BtPBnmG0RH9Ecv0W6eD_8vDT_Ttrrfg&oe=62E54607" alt=""></div>
+                                <div class="search"><input type="search" placeholder="Write a comment"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="post-container">
+                        <div class="posts">
+                            <div class="item1">
+                                <div class="bio">
+                                    <div class="profile"><img src="./images/kristein2.jpg" alt=""></div>
+                                    <div class="desc">
+                                        <p class="name">Professor</p>
+                                        <p class="time">12h <svg fill="currentColor" viewBox="0 0 16 16" width="1em" height="1em" class="a8c37x1j ms05siws l3qrxjdp b7h9ocf4 py1f6qlh cyypbtt7 fwizqjfa" title="Shared with Public"><title>Shared with Public</title><g fill-rule="evenodd" transform="translate(-448 -544)"><g><path d="M109.5 408.5c0 3.23-2.04 5.983-4.903 7.036l.07-.036c1.167-1 1.814-2.967 2-3.834.214-1 .303-1.3-.5-1.96-.31-.253-.677-.196-1.04-.476-.246-.19-.356-.59-.606-.73-.594-.337-1.107.11-1.954.223a2.666 2.666 0 0 1-1.15-.123c-.007 0-.007 0-.013-.004l-.083-.03c-.164-.082-.077-.206.006-.36h-.006c.086-.17.086-.376-.05-.529-.19-.214-.54-.214-.804-.224-.106-.003-.21 0-.313.004l-.003-.004c-.04 0-.084.004-.124.004h-.037c-.323.007-.666-.034-.893-.314-.263-.353-.29-.733.097-1.09.28-.26.863-.8 1.807-.22.603.37 1.166.667 1.666.5.33-.11.48-.303.094-.87a1.128 1.128 0 0 1-.214-.73c.067-.776.687-.84 1.164-1.2.466-.356.68-.943.546-1.457-.106-.413-.51-.873-1.28-1.01a7.49 7.49 0 0 1 6.524 7.434" transform="translate(354 143.5)"></path><path d="M104.107 415.696A7.498 7.498 0 0 1 94.5 408.5a7.48 7.48 0 0 1 3.407-6.283 5.474 5.474 0 0 0-1.653 2.334c-.753 2.217-.217 4.075 2.29 4.075.833 0 1.4.561 1.333 2.375-.013.403.52 1.78 2.45 1.89.7.04 1.184 1.053 1.33 1.74.06.29.127.65.257.97a.174.174 0 0 0 .193.096" transform="translate(354 143.5)"></path><path fill-rule="nonzero" d="M110 408.5a8 8 0 1 1-16 0 8 8 0 0 1 16 0zm-1 0a7 7 0 1 0-14 0 7 7 0 0 0 14 0z" transform="translate(354 143.5)"></path></g></g></svg></p>
+                                    </div>
+                                </div>
+                                <div class="_3dots"><span></span></div>
+                            </div>
+
+                            <div class="item2">
+                                <div class="post"><img src="./images/kristein3.jpg" alt=""></div>
+                            </div>
+
+                            <div class="item3">
+                                    <div class="like">
+                                        <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                        <span>Like</span>
+                                    </div>
+                                    <div class="comment">
+                                        <i class="fa fa-comment-o" aria-hidden="true"></i>
+                                        <span>Comment</span>
+                                    </div>
+                            </div>
+
+                            <hr>
+
+                            <div class="item4">
+                                <div class="profile"><img src="https://scontent-tir2-1.xx.fbcdn.net/v/t1.6435-1/170814730_2976249592701775_122923138642714073_n.jpg?stp=cp0_dst-jpg_p48x48&_nc_cat=111&ccb=1-7&_nc_sid=7206a8&_nc_ohc=vZ8yZDxrW28AX8X0Zzh&_nc_oc=AQmtZZiwO6Jybafw7FBe-TEBt02Td0KKVb0DeCEAm3KZBe9SlHNF_yusclmX43v2wb3x2T1eYI_zcP-OpyKiaU5g&_nc_ht=scontent-tir2-1.xx&oh=00_AT8YchkVpDvW-E3BtPBnmG0RH9Ecv0W6eD_8vDT_Ttrrfg&oe=62E54607" alt=""></div>
+                                <div class="search"><input type="search" placeholder="Write a comment"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="post-container">
+                        <div class="posts">
+                            <div class="item1">
+                                <div class="bio">
+                                    <div class="profile"><img src="./images/kartik2.webp" alt=""></div>
+                                    <div class="desc">
+                                        <p class="name">Professor</p>
+                                        <p class="time">12h <svg fill="currentColor" viewBox="0 0 16 16" width="1em" height="1em" class="a8c37x1j ms05siws l3qrxjdp b7h9ocf4 py1f6qlh cyypbtt7 fwizqjfa" title="Shared with Public"><title>Shared with Public</title><g fill-rule="evenodd" transform="translate(-448 -544)"><g><path d="M109.5 408.5c0 3.23-2.04 5.983-4.903 7.036l.07-.036c1.167-1 1.814-2.967 2-3.834.214-1 .303-1.3-.5-1.96-.31-.253-.677-.196-1.04-.476-.246-.19-.356-.59-.606-.73-.594-.337-1.107.11-1.954.223a2.666 2.666 0 0 1-1.15-.123c-.007 0-.007 0-.013-.004l-.083-.03c-.164-.082-.077-.206.006-.36h-.006c.086-.17.086-.376-.05-.529-.19-.214-.54-.214-.804-.224-.106-.003-.21 0-.313.004l-.003-.004c-.04 0-.084.004-.124.004h-.037c-.323.007-.666-.034-.893-.314-.263-.353-.29-.733.097-1.09.28-.26.863-.8 1.807-.22.603.37 1.166.667 1.666.5.33-.11.48-.303.094-.87a1.128 1.128 0 0 1-.214-.73c.067-.776.687-.84 1.164-1.2.466-.356.68-.943.546-1.457-.106-.413-.51-.873-1.28-1.01a7.49 7.49 0 0 1 6.524 7.434" transform="translate(354 143.5)"></path><path d="M104.107 415.696A7.498 7.498 0 0 1 94.5 408.5a7.48 7.48 0 0 1 3.407-6.283 5.474 5.474 0 0 0-1.653 2.334c-.753 2.217-.217 4.075 2.29 4.075.833 0 1.4.561 1.333 2.375-.013.403.52 1.78 2.45 1.89.7.04 1.184 1.053 1.33 1.74.06.29.127.65.257.97a.174.174 0 0 0 .193.096" transform="translate(354 143.5)"></path><path fill-rule="nonzero" d="M110 408.5a8 8 0 1 1-16 0 8 8 0 0 1 16 0zm-1 0a7 7 0 1 0-14 0 7 7 0 0 0 14 0z" transform="translate(354 143.5)"></path></g></g></svg></p>
+                                    </div>
+                                </div>
+                                <div class="_3dots"><span></span></div>
+                            </div>
+
+                            <div class="item2">
+                                <div class="post"><img src="./images/kartik3.webp" alt=""></div>
+                            </div>
+
+                            <div class="item3">
+                                    <div class="like">
+                                        <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                        <span>Like</span>
+                                    </div>
+                                    <div class="comment">
+                                        <i class="fa fa-comment-o" aria-hidden="true"></i>
+                                        <span>Comment</span>
+                                    </div>
+                            </div>
+
+                            <hr>
+
+                            <div class="item4">
+                                <div class="profile"><img src="https://scontent-tir2-1.xx.fbcdn.net/v/t1.6435-1/170814730_2976249592701775_122923138642714073_n.jpg?stp=cp0_dst-jpg_p48x48&_nc_cat=111&ccb=1-7&_nc_sid=7206a8&_nc_ohc=vZ8yZDxrW28AX8X0Zzh&_nc_oc=AQmtZZiwO6Jybafw7FBe-TEBt02Td0KKVb0DeCEAm3KZBe9SlHNF_yusclmX43v2wb3x2T1eYI_zcP-OpyKiaU5g&_nc_ht=scontent-tir2-1.xx&oh=00_AT8YchkVpDvW-E3BtPBnmG0RH9Ecv0W6eD_8vDT_Ttrrfg&oe=62E54607" alt=""></div>
+                                <div class="search"><input type="search" placeholder="Write a comment"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- RIGHT SIDE BAR -->
+
+                <div class="col3 rightBar">
+
+                    <hr>
+
+                    <!-- FRIEND REQUEST -->
+
+                    <div class="friendRequest-container">
+                        <div class="title-wrapper">
+                            <div class="title">Friend Requests</div>
+                            <div class="seeAll"><a href="">See all</a></div>
+                        </div>
+                        
+                        <div class="friendRequest-wrapper">
+                            
+                            <div class="friendRequest">
+                                <div class="friend-wrapper">
+                                    <div class="bio">
+                                        <div class="profile"><img src="./images/spiderman.jpg" alt=""></div>
+                                        <div class="desc">
+                                            <h3 class="name">Spiderman</h3>
+                                            <p class="mutual">1 mutual friend</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="time">3d</div>
+                                </div>
+                                <div class="confirm">
+                                    <div class="confirmation">
+                                        <button class="btn btn-blue">Confirm</button>
+                                    </div>
+                                    <div class="delete">
+                                        <button class="btn btn-grey">Delete</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="friendRequest-wrapper">
+                            
+                            <div class="friendRequest">
+                                <div class="friend-wrapper">
+                                    <div class="bio">
+                                        <div class="profile"><img src="./images/batman.jpg" alt=""></div>
+                                        <div class="desc">
+                                            <h3 class="name">Bruce Wayne</h3>
+                                            <p class="mutual">1 mutual friend</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="time">3d</div>
+                                </div>
+                                <div class="confirm">
+                                    <div class="confirmation">
+                                        <button class="btn btn-blue">Confirm</button>
+                                    </div>
+                                    <div class="delete">
+                                        <button class="btn btn-grey">Delete</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr style="margin: 20px;">
+                    
+                    <!-- FRIENDS -->
+                    <div class="friends-container">
+                        <div class="title">
+                            <p>Friends</p>
+                        </div>
+                        <div class="left-menu-list">
+                            <ul class="left-menu-links left-menu-visible">
+                                <li>
+                                    <div class="menu-link-items">
+                                        <div class="item1"><img class="hu5pjgll bixrwtb6" src="./images/CA.webp" style="width:36px" alt=""></div>
+                                        <div class="item2">Captain America</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="menu-link-items">
+                                        <div class="item1"><img class="hu5pjgll bixrwtb6" src="./images/thor.jpg" style="width:36px;" alt=""></div>
+                                        <div class="item2">Thor</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="menu-link-items">
+                                        <div class="item1"><img class="hu5pjgll bixrwtb6" src="./images/black-widow.jpg" style="width:36px" alt=""></div>
+                                        <div class="item2">Black Widow</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="menu-link-items">
+                                        <div class="item1"><img class="hu5pjgll bixrwtb6" src="./images/superman.jpg" style="width:36px" alt=""></div>
+                                        <div class="item2">Superman</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="menu-link-items">
+                                        <div class="item1"><img class="hu5pjgll bixrwtb6" src="./images/tokyo.jpg" style="width:36px" alt=""></div>
+                                        <div class="item2">Tokyo</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="menu-link-items">
+                                        <div class="item1"><img class="hu5pjgll bixrwtb6" src="./images/shang_chi.jpg" alt="" style="width: 36px;"></div>
+                                        <div class="item2">Shang Chi</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="menu-link-items">
+                                        <div class="item1"><img class="hu5pjgll bixrwtb6" src="./images/league_of_legends.jpg" alt="" style=" width: 36px;"></div>
+                                        <div class="item2">League of Legends</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="menu-link-items">
+                                        <div class="item1"><img class="hu5pjgll bixrwtb6" src="./images/krish.jpg" alt="" style=" width: 36px;"></div>
+                                        <div class="item2">Krishh</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="menu-link-items">
+                                        <div class="item1"><img class="hu5pjgll bixrwtb6" src="./images/hulk.webp" alt="" style=" width: 36px;"></div>
+                                        <div class="item2">Hulk</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="menu-link-items">
+                                        <div class="item1"><img class="hu5pjgll bixrwtb6" src="./images/loki.webp" alt="" style=" width: 36px;"></div>
+                                        <div class="item2">Loki</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="menu-link-items">
+                                        <div class="item1"><img class="hu5pjgll bixrwtb6" src="./images/tony_stark.jpg" alt="" style=" width: 36px;"></div>
+                                        <div class="item2">Tony Stark</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="menu-link-items">
+                                        <div class="item1"><img class="hu5pjgll bixrwtb6" src="./images/doctor_strange.jpg" alt="" style=" width: 36px;"></div>
+                                        <div class="item2">Doctor Strange</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="menu-link-items">
+                                        <div class="item1"><img class="hu5pjgll bixrwtb6" src="./images/Mark_Zuckerberg.jpg" alt="" style=" width: 36px;"></div>
+                                        <div class="item2">Mark Zuckerberg</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="menu-link-items">
+                                        <div class="item1"><img class="hu5pjgll bixrwtb6" src="./images/steve_jobs.jpg" alt="" style=" width: 36px;"></div>
+                                        <div class="item2">Steve Jobs</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="menu-link-items">
+                                        <div class="item1"><img class="hu5pjgll bixrwtb6" src="./images/aquaman.jpg" alt="" style=" width: 36px;"></div>
+                                        <div class="item2">Aquaman</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="menu-link-items">
+                                        <div class="item1"><img class="hu5pjgll bixrwtb6" src="./images/blackPanther.jpg" alt="" style=" width: 36px;"></div>
+                                        <div class="item2">Black Panther</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="menu-link-items">
+                                        <div class="item1"><img class="hu5pjgll bixrwtb6" src="./images/winter_soldier.jpg" alt="" style=" width: 36px;"></div>
+                                        <div class="item2">Winter Soldier</div>
+                                    </div>
+                                </li>
+                                    <div class="menu-link-items">
+                                        <div class="item1"><img class="hu5pjgll bixrwtb6" src="./images/homelander.jpg" alt="" style=" width: 36px;"></div>
+                                        <div class="item2">Homelander</div>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <hr>                
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="post-form-wrapper post-form-js">
+        <div class="title">
+            <h2>Create Post</h2>
+            <p><i class="fa fa-times post-form-closer-js" aria-hidden="true"></i></p>
+        </div>
+
+        <hr>
+        <div class="bio">
+            <div class="profile"><img src="https://scontent-tir2-1.xx.fbcdn.net/v/t1.6435-1/170814730_2976249592701775_122923138642714073_n.jpg?stp=cp0_dst-jpg_p60x60&_nc_cat=111&ccb=1-7&_nc_sid=7206a8&_nc_ohc=b0KKoAMSlOkAX8EBUqV&_nc_oc=AQl68BxJxk8QgyfnDMDH0jBJaOynikng_k_imkJKWzzWAzpuipzNLSZLZDgrcYhjWbtt0T2i8CCknl3IRNVIJEgi&_nc_ht=scontent-tir2-1.xx&oh=00_AT_5hMoo02MnVocJXtVzO5hiFqeO5CYzsZQELl7dc9WfQw&oe=62E15187" alt=""></div>
+            <div class="desc">
+                <div class="name">Tarun Sharma</div>
+                <div class="public"><i class="fa fa-globe" aria-hidden="true"></i> <span>Public</span></div>
+            </div>
+        </div>
+        <div class="textarea">
+            <textarea class="post-textarea-js" name="" placeholder="What's on your mind, Tarun?" id="" cols="30" rows="10"></textarea>    
+            <div class="post-files">
+                <div class="add-to-your-post"><p>Add to your post</p></div>
+                <div class="files">
+                    <p>
+                        <i class="fa fa-picture-o" aria-hidden="true"></i>
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <i class="fa fa-smile-o" aria-hidden="true"></i>
+                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+    
+                    </p>
+                </div>
+            </div>
+            <div class="post-submit"><button type='submit'  class="btn btn-grey post-btn post-btn-js" disabled>Post</button></div>
+        </div>    
+
+
+    </div>
+
+
+    
+
+
+<script src="./js/app.js"></script>    
+</body>
+</html>
